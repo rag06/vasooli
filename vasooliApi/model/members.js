@@ -9,7 +9,7 @@ getMemberById: function (id, callback) {
     return db.query("select * from members where member_Id=?",[id], callback);
 },
 addMember: function (members, callback) {
-    return db.query("Insert into members (member_EmpId, member_Name, member_EmailId, member_Image, member_Role, member_DateOfBirth, member_Password, member_Status, member_PhoneNumber)  values(?,?,?)", [members.member_EmpId, members.member_Name, members.member_EmailId, members.member_Image, members.member_Role, members.member_DateOfBirth,members.member_Password, members.member_Status, members.member_PhoneNumber], callback);
+    return db.query("Insert into members (member_EmpId, member_Name, member_EmailId, member_Image, member_Role, member_DateOfBirth, member_Password, member_Status, member_PhoneNumber)  values(?,?,?,?,?,?,?,?,?)", [members.member_EmpId, members.member_Name, members.member_EmailId, members.member_Image, members.member_Role, members.member_DateOfBirth,members.member_Password, members.member_Status, members.member_PhoneNumber], callback);
 },
 deleteMember: function (id, callback) {
     return db.query("delete from members where member_Id=?",[id], callback);
